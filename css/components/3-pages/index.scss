@@ -359,6 +359,8 @@
       flex-direction: column;
       top: unset;
       bottom: 100%;
+      width: calc(100% - 50px);
+      transform: translate(-50%, 40px);
       &__row {
         width: 100%;
         flex-direction: column;

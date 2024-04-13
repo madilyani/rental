@@ -2863,6 +2863,9 @@ p.sm {
             flex-direction: column;
     top: unset;
     bottom: 100%;
+    width: calc(100% - 50px);
+    -webkit-transform: translate(-50%, 40px);
+            transform: translate(-50%, 40px);
   }
   .introRent__row {
     width: 100%;
