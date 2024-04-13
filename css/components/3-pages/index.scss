@@ -24,15 +24,23 @@
       display: flex;
     }
     &__item {
-      width: 25%;
+      width: 50%;
       border-right: 1px solid #e7e7e7;
       padding: 15px 16px;
       cursor: pointer;
       transition: 0.3s ease;
-      position: relative;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      &-wrapper {
+        width: 50%;
+        position: relative;
+        display: flex;
+        border-right: 1px solid #e7e7e7;
+        &:last-child {
+          border-color: transparent;
+        }
+      }
       &:hover {
         opacity: 1;
         background-color: #f5f5f5;
@@ -64,18 +72,14 @@
         }
       }
       input {
-        font-family: $mainFont;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 150%;
-        letter-spacing: 0.01em;
-        color: #323232;
-        display: -webkit-box;
-        -webkit-line-clamp: 1;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        padding-left: 24px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        opacity: 0;
+        cursor: pointer;
       }
       p {
         font-weight: 500;
@@ -386,7 +390,7 @@
   .intro {
     &__inner {
       &-title {
-        margin-bottom: 338px;
+        margin-bottom: 200px;
       }
     }
     &Rent {
@@ -402,7 +406,10 @@
       &__item {
         width: 100%;
         border: unset;
-        padding: 14px;
+        padding: 18px;
+        &-wrapper {
+          width: 100%;
+        }
       }
       &__search {
         width: 100%;
@@ -465,6 +472,19 @@
 // 540px
 @mixin intro-xsm-sm {
   .intro {
+    &__inner {
+      &-title {
+        margin-bottom: 338px;
+      }
+    }
+    &Rent {
+      &__item {
+        padding: 14px;
+        &-wrapper {
+          flex-direction: column;
+        }
+      }
+    }
     &Banner {
       width: calc(100% + 48px);
       margin: 0 -24px;
