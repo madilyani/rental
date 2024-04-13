@@ -219,7 +219,11 @@
                             <use xlink:href="#chevron-right"></use>
                           </svg>
                         </a>
-                        <button type="button" class="introRent__drop-finder">
+                        <button
+                          type="button"
+                          data-mod="#modal-1"
+                          class="introRent__drop-finder modallBtn"
+                        >
                           Location finder
                           <span>
                             <img src="./images/icons/arrow-right.svg" alt="" />
@@ -229,15 +233,15 @@
                     </div>
                   </div>
                   <div class="introRent__item-wrapper">
+                    <input type="text" name="datetimes" id="datetimes" />
                     <div class="introRent__item">
-                      <input type="text" name="datetimes" />
                       <h6>
                         <span>
                           <img src="./images/icons/location.svg" alt="" />
                         </span>
                         Pickup Date/Time
                       </h6>
-                      <p id="startDate">Start Date:</p>
+                      <p id="startDate">Choose date</p>
                     </div>
                     <div class="introRent__item">
                       <h6>
@@ -246,7 +250,7 @@
                         </span>
                         Dropoff Date/Time
                       </h6>
-                      <p id="endDate">End Date:</p>
+                      <p id="endDate">Choose date</p>
                     </div>
                   </div>
                 </div>
@@ -1307,7 +1311,7 @@
       <!-- footer end
     =========================================== -->
     </main>
-    <div class="locFinder__wrapper modall " id="modal-1">
+    <div class="locFinder__wrapper modall" id="modal-1">
       <div class="locFinder">
         <div class="locFinder__head">
           <h3>Location finder</h3>
@@ -1315,7 +1319,7 @@
             <img src="./images/icons/close.svg" alt="" />
           </div>
         </div>
-        <div class="locFinder__body">
+        <div class="locFinder__body content1 active">
           <div class="input__outer">
             <div class="input__label">
               <p>Pick your country</p>
@@ -1388,10 +1392,10 @@
             </li>
           </ul>
         </div>
-        <div class="locFinder__body">
+        <div class="locFinder__body content2">
           <div class="input__outer">
             <div class="input__label">
-              <h5>France</h5>
+              <h5 class="backBtn1">France</h5>
               <svg>
                 <use xlink:href="#chevron-right"></use>
               </svg>
@@ -1450,14 +1454,14 @@
             </li>
           </ul>
         </div>
-        <div class="locFinder__body active">
+        <div class="locFinder__body content3">
           <div class="input__outer">
             <div class="input__label">
-              <h5>France</h5>
+              <h5 class="backBtn1">France</h5>
               <svg>
                 <use xlink:href="#chevron-right"></use>
               </svg>
-              <h5>Paris</h5>
+              <h5 class="backBtn2">Paris</h5>
               <svg>
                 <use xlink:href="#chevron-right"></use>
               </svg>
@@ -1547,34 +1551,21 @@
     <script src="./js/modals.js"></script>
     <script>
       $(function () {
-        $('input[name="datetimes"]').daterangepicker({
-          timePicker: true,
-          startDate: moment().startOf("hour"),
-          endDate: moment().startOf("hour").add(32, "hour"),
-          locale: {
-            format: "M/DD hh:mm A",
+        $('input[name="datetimes"]').daterangepicker(
+          {
+            timePicker: true,
+            locale: {
+              format: "M/DD hh:mm A",
+            },
           },
-        });
+          function (start, end, label) {
+            let startDate = start.format("MM.DD.YY HH:MM A").toString();
+            let endDate = end.format("MM.DD.YY HH:MM A").toString();
+            document.getElementById("startDate").innerHTML = startDate;
+            document.getElementById("endDate").innerHTML = endDate;
+          }
+        );
       });
-      // $(function () {
-      //   $("#fromDate").datepicker({
-      //     defaultDate: "+1w",
-      //     changeMonth: true,
-      //     numberOfMonths: 1,
-
-      //     onClose: function (selectedDate) {
-      //       $("#toDate").datepicker("option", "minDate", selectedDate);
-      //     },
-      //   });
-      //   $("#toDate").datepicker({
-      //     defaultDate: "+1w",
-      //     changeMonth: true,
-      //     numberOfMonths: 1,
-      //     onClose: function (selectedDate) {
-      //       $("#fromDate").datepicker("option", "maxDate", selectedDate);
-      //     },
-      //   });
-      // });
     </script>
   </body>
 </html>

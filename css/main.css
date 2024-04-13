@@ -1007,6 +1007,10 @@ p.sm {
           align-items: center;
   cursor: pointer;
 }
+.locFinder__close img {
+  width: 100%;
+  pointer-events: none;
+}
 .locFinder__close:hover {
   opacity: 0.8;
 }
@@ -1018,6 +1022,15 @@ p.sm {
   -webkit-animation: fadeIn 0.3s ease;
           animation: fadeIn 0.3s ease;
   display: block;
+}
+.locFinder__body .input__label h5 {
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+}
+.locFinder__body .input__label h5:hover {
+  opacity: 0.8;
 }
 .locFinder__country li {
   display: -webkit-box;
@@ -1548,6 +1561,16 @@ p.sm {
   display: -ms-flexbox;
   display: flex;
 }
+.introRent #datetimes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  opacity: 0;
+  cursor: pointer;
+}
 .introRent__item {
   width: 50%;
   border-right: 1px solid #e7e7e7;
@@ -1565,6 +1588,7 @@ p.sm {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
 }
 .introRent__item-wrapper {
   width: 50%;
@@ -1616,16 +1640,6 @@ p.sm {
 }
 .introRent__item h6 span img {
   width: 100%;
-}
-.introRent__item input {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  opacity: 0;
-  cursor: pointer;
 }
 .introRent__item p {
   font-weight: 500;
@@ -1700,7 +1714,10 @@ p.sm {
   border: 1px solid #e7e7e7;
   border-radius: 16px;
   opacity: 0;
+  z-index: 5;
   visibility: hidden;
+  -webkit-animation: fadeIn 0.2s linear;
+          animation: fadeIn 0.2s linear;
 }
 .introRent__drop.active {
   opacity: 1;

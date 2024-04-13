@@ -332,6 +332,10 @@ p {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    img {
+      width: 100%;
+      pointer-events: none;
+    }
     &:hover {
       opacity: 0.8;
     }
@@ -342,6 +346,17 @@ p {
     &.active {
       animation: fadeIn 0.3s ease;
       display: block;
+    }
+    .input {
+      &__label {
+        h5 {
+          cursor: pointer;
+          @include transition;
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
     }
   }
   &__country {
@@ -410,7 +425,7 @@ p {
           svg {
             color: $secondary;
             animation: slideLeft 0.4s ease;
-            animation-delay: .1s;
+            animation-delay: 0.1s;
           }
         }
         h5 {
