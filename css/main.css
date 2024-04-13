@@ -2884,7 +2884,7 @@ p.sm {
             flex-direction: column;
     top: unset;
     bottom: 100%;
-    width: calc(100% - 50px);
+    width: calc(100% - 48px);
     -webkit-transform: translate(-50%, 40px);
             transform: translate(-50%, 40px);
   }
@@ -3499,6 +3499,10 @@ p.sm {
     height: 24px;
   }
 
+  .introBanner {
+    width: calc(100% + 48px);
+    margin: 0 -24px;
+  }
   .introPartners__item {
     width: calc(50% - 32px);
     max-width: 138px;

@@ -379,7 +379,7 @@
       flex-direction: column;
       top: unset;
       bottom: 100%;
-      width: calc(100% - 50px);
+      width: calc(100% - 48px);
       transform: translate(-50%, 40px);
       &__row {
         width: 100%;
@@ -426,8 +426,6 @@
 @mixin intro-sm-md {
   .intro {
     padding: 32px 0 64px;
-    &__inner {
-    }
     &Partners {
       padding-top: 24px;
       flex-wrap: wrap;
@@ -453,6 +451,10 @@
 // 540px
 @mixin intro-xsm-sm {
   .intro {
+    &Banner {
+      width: calc(100% + 48px);
+      margin: 0 -24px;
+    }
     &Partners {
       &__item {
         width: calc(50% - 32px);
