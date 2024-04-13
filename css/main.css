@@ -490,7 +490,7 @@ p.sm {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
-  padding: 40px;
+  padding: 24px;
   display: none;
   z-index: 9999;
 }
@@ -1326,8 +1326,8 @@ p.sm {
       -ms-flex-align: start;
           align-items: flex-start;
   pointer-events: none;
-  border-radius: 16px;
   overflow: hidden;
+  border-radius: 16px;
 }
 .introBanner__bg::before {
   position: absolute;
@@ -1338,6 +1338,7 @@ p.sm {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.5)));
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%);
   content: "";
+  z-index: 1;
 }
 .introBanner__bg::after {
   position: absolute;
@@ -1347,12 +1348,32 @@ p.sm {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   content: "";
+  z-index: 1;
+}
+.introBanner__bg-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .introBanner__bg img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
   -o-object-position: top;
      object-position: top;
 }
@@ -3456,6 +3477,16 @@ p.sm {
   }
 }
 @media (max-width: 540px) {
+  .locFinder {
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+    max-width: unset;
+  }
+  .locFinder__wrapper {
+    padding: 0;
+  }
+
   .header__inner {
     padding: 26px 0;
   }
