@@ -233,7 +233,7 @@
                       </span>
                       Pickup Date/Time
                     </h6>
-                    <p class="sm">01.01.24 9:00 AM</p>
+                    <input type="text" name="datetimes" />
                   </div>
                   <div class="introRent__item">
                     <h6>
@@ -242,7 +242,7 @@
                       </span>
                       Dropoff Date/Time
                     </h6>
-                    <p class="sm">01.01.24 9:00 AM</p>
+                    <input type="text" name="datetimes" />
                   </div>
                 </div>
                 <button type="button" class="introRent__search">
@@ -1540,5 +1540,17 @@
     <script src="./js/slick.min.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/modals.js"></script>
+    <script>
+      $(function () {
+        $('input[name="datetimes"]').daterangepicker({
+          timePicker: true,
+          startDate: moment().startOf("hour"),
+          endDate: moment().startOf("hour").add(32, "hour"),
+          locale: {
+            format: "M/DD hh:mm A",
+          },
+        });
+      });
+    </script>
   </body>
 </html>
