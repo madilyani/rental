@@ -314,6 +314,12 @@
   display: flex;
 }
 
+.daterangepicker .calendar-time select {
+  -webkit-appearance: none;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+}
+
 .daterangepicker .calendar-time select.disabled {
   color: #ccc;
   cursor: not-allowed;
@@ -403,34 +409,27 @@
   .daterangepicker {
     width: auto;
   }
-
   .daterangepicker .ranges ul {
     width: 140px;
   }
-
   .daterangepicker.single .ranges ul {
     width: 100%;
   }
-
   .daterangepicker.single .drp-calendar.left {
     clear: none;
   }
-
   .daterangepicker.single .ranges,
-.daterangepicker.single .drp-calendar {
+  .daterangepicker.single .drp-calendar {
     float: left;
   }
-
   .daterangepicker {
     direction: ltr;
     text-align: left;
   }
-
   .daterangepicker .drp-calendar.left {
     clear: left;
     margin-right: 0;
   }
-
   .daterangepicker .drp-calendar.left .calendar-table {
     border-right: none;
     border-top-right-radius: 0;
@@ -438,23 +437,19 @@
     border-right: 1px solid #e7e7e7;
     padding-right: 16px !important;
   }
-
   .daterangepicker .drp-calendar.right {
     margin-left: 0;
   }
-
   .daterangepicker .drp-calendar.right .calendar-table {
     border-left: none;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
-
   .daterangepicker .drp-calendar.left .calendar-table {
     padding-right: 0;
   }
-
   .daterangepicker .ranges,
-.daterangepicker .drp-calendar {
+  .daterangepicker .drp-calendar {
     float: left;
   }
 }
@@ -462,15 +457,12 @@
   .daterangepicker .ranges {
     width: auto;
   }
-
   .daterangepicker .ranges {
     float: left;
   }
-
   .daterangepicker.rtl .ranges {
     float: right;
   }
-
   .daterangepicker .drp-calendar.left {
     clear: none !important;
   }
@@ -1228,8 +1220,8 @@ p.sm {
           animation-name: sticky;
   -webkit-animation-duration: 0.4s;
           animation-duration: 0.4s;
-  -webkit-box-shadow: 0px 4px 4px 0px #00000021;
-          box-shadow: 0px 4px 4px 0px #00000021;
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1294117647);
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1294117647);
   background-color: #fff;
 }
 .header__inner {
@@ -2234,6 +2226,12 @@ p.sm {
   margin: 0 -16px;
   padding-top: 16px;
 }
+.destination__inner-content {
+  display: none;
+}
+.destination__inner-content.active {
+  display: block;
+}
 .destinationItem {
   width: calc(25% - 8px);
   border-radius: 16px;
@@ -2945,7 +2943,6 @@ p.sm {
   h1 {
     font-size: 65px;
   }
-
   h2.big {
     font-size: 65px;
   }
@@ -2954,18 +2951,15 @@ p.sm {
   .auto__container {
     padding: 0 30px;
   }
-
   h1 {
     font-size: 60px;
   }
-
   h2 {
     font-size: 44px;
   }
   h2.big {
     font-size: 60px;
   }
-
   .introRent__row {
     width: calc(100% - 100px);
   }
@@ -2990,7 +2984,6 @@ p.sm {
   .introPartners {
     padding-top: 32px;
   }
-
   .needs {
     padding: 70px 0;
   }
@@ -3006,7 +2999,6 @@ p.sm {
   .needsItem__inner {
     padding: 38% 16px 16px 16px;
   }
-
   .promotion {
     padding: 60px 0;
   }
@@ -3024,7 +3016,6 @@ p.sm {
   .promotionDiscount h4 {
     font-size: 16px;
   }
-
   .rewards {
     padding: 60px 0;
   }
@@ -3043,7 +3034,6 @@ p.sm {
     margin: 5px;
     width: calc(50% - 10px);
   }
-
   .reviews {
     padding: 75px 0;
   }
@@ -3066,7 +3056,6 @@ p.sm {
   .reviewsItem h3 {
     font-size: 20px;
   }
-
   .roadmap {
     padding: 75px 0;
   }
@@ -3079,11 +3068,9 @@ p.sm {
   .roadmapItem h3 {
     font-size: 20px;
   }
-
   .faq {
     padding: 75px 0;
   }
-
   .articles {
     padding: 75px 0;
   }
@@ -3096,7 +3083,6 @@ p.sm {
   .articlesItem {
     padding: 8px;
   }
-
   .destination {
     padding: 70px 0 46px;
   }
@@ -3111,37 +3097,30 @@ p.sm {
   ::-webkit-scrollbar {
     display: none;
   }
-
   h1 {
     font-size: 55px;
   }
-
   h2 {
     font-size: 40px;
   }
   h2.big {
     font-size: 55px;
   }
-
   p.big {
     font-size: 16px;
   }
-
   .button.secondary {
     font-size: 18px;
   }
-
   .header__inner {
     padding: 20px 0;
   }
   .header__inner-logo {
     width: 180px;
   }
-
   body.active {
     overflow: hidden;
   }
-
   .nav {
     position: fixed;
     top: 72px;
@@ -3228,7 +3207,6 @@ p.sm {
   .nav__inner .lang {
     margin-right: 48px;
   }
-
   .burger {
     display: block;
     cursor: pointer;
@@ -3308,16 +3286,13 @@ p.sm {
     -webkit-transform: translate(-50%, 50%) rotate(-45deg);
     transform: translate(-50%, 50%) rotate(-45deg);
   }
-
   .promotion__inner-title {
     margin-bottom: 60px;
     width: calc(100% - 205px);
   }
-
   .rewards__inner-title {
     margin-bottom: 100px;
   }
-
   .roadmap__inner-title {
     margin-bottom: 40px;
   }
@@ -3341,7 +3316,6 @@ p.sm {
   .roadmapItem p {
     font-size: 12px;
   }
-
   .destination__inner-row {
     margin: 0 -10px;
   }
@@ -3378,14 +3352,12 @@ p.sm {
   h1 {
     font-size: 50px;
   }
-
   h2 {
     font-size: 36px;
   }
   h2.big {
     font-size: 50px;
   }
-
   .intro__inner-title {
     margin-bottom: 200px;
   }
@@ -3445,7 +3417,6 @@ p.sm {
   .introItem:last-child {
     margin: 0;
   }
-
   .needs {
     padding: 64px 0;
   }
@@ -3495,7 +3466,6 @@ p.sm {
   .needsItem h3 {
     margin-bottom: 12px;
   }
-
   .rewards__inner {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3523,11 +3493,9 @@ p.sm {
     margin: 10px;
     width: calc(50% - 20px);
   }
-
   .roadmapItem::before {
     width: 66%;
   }
-
   .faq {
     padding: 64px 0;
   }
@@ -3546,7 +3514,6 @@ p.sm {
   .faqItem__body.active {
     padding: 0 0 10px 32px;
   }
-
   .articles {
     padding: 64px 0;
   }
@@ -3592,7 +3559,6 @@ p.sm {
     -webkit-transform: scaleX(-1);
             transform: scaleX(-1);
   }
-
   .footer__inner-row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3613,7 +3579,6 @@ p.sm {
   .destinationCard {
     width: calc(50% - 20px);
   }
-
   .roadmap__inner-title {
     margin-bottom: 32px;
   }
@@ -3660,18 +3625,15 @@ p.sm {
   .auto__container {
     padding: 0 24px;
   }
-
   h1 {
     font-size: 45px;
   }
-
   h2 {
     font-size: 32px;
   }
   h2.big {
     font-size: 45px;
   }
-
   .intro {
     padding: 32px 0 64px;
   }
@@ -3693,7 +3655,6 @@ p.sm {
   .introPartners__item.md {
     width: calc(42% - 48px);
   }
-
   .promotion {
     padding: 45px 0;
   }
@@ -3703,14 +3664,12 @@ p.sm {
   .promotion__inner-title {
     margin-bottom: 45px;
   }
-
   .rewards {
     padding: 45px 0;
   }
   .rewards__inner {
     padding: 35px 24px;
   }
-
   .faq__inner-row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3734,7 +3693,6 @@ p.sm {
   .faqItem__body.active {
     padding: 0 20px 16px 32px;
   }
-
   .destination {
     padding: 64px 0;
   }
@@ -3819,7 +3777,6 @@ p.sm {
     opacity: 1;
     max-height: 600px;
   }
-
   .footer__inner-row {
     margin-bottom: 32px;
   }
@@ -3863,11 +3820,9 @@ p.sm {
   h1 {
     font-size: 40px;
   }
-
   h2.big {
     font-size: 40px;
   }
-
   .promotion {
     padding: 32px 0;
   }
@@ -3904,7 +3859,6 @@ p.sm {
     padding: 0;
     margin-bottom: 24px;
   }
-
   .rewards {
     padding: 32px 0;
   }
@@ -3950,7 +3904,6 @@ p.sm {
     height: 32px;
     margin: 0 8px 0 0;
   }
-
   .reviews {
     padding: 64px 0;
   }
@@ -3979,11 +3932,9 @@ p.sm {
   .reviewsItem {
     padding: 48px 24px 24px 24px;
   }
-
   .roadmap {
     padding: 64px 0;
   }
-
   .articles__inner-title {
     margin-bottom: 24px;
   }
@@ -4001,7 +3952,6 @@ p.sm {
   .locFinder__wrapper {
     padding: 0;
   }
-
   .daterangepicker {
     position: fixed;
     top: 0 !important;
@@ -4010,6 +3960,7 @@ p.sm {
     height: 100%;
     margin: 0;
     border-radius: unset;
+    overflow-y: auto;
   }
   .daterangepicker .drp-calendar {
     width: 100%;
@@ -4023,36 +3974,21 @@ p.sm {
     padding: 0 !important;
   }
   .daterangepicker .drp-calendar.right .calendar-time {
-    position: absolute;
-    bottom: 94px;
-  }
-  .daterangepicker .drp-buttons {
-    position: absolute;
-    left: 0;
-    bottom: 0;
     width: 100%;
-    padding: 24px;
   }
   .daterangepicker .calendar-time {
-    position: absolute;
-    left: 24px;
-    bottom: 150px;
-    margin: 0;
-    width: calc(100% - 48px);
+    width: 100%;
   }
-
   .header__inner {
     padding: 26px 0;
   }
   .header__inner-logo {
     width: 168px;
   }
-
   .burger {
     width: 24px;
     height: 24px;
   }
-
   .intro__inner-title {
     margin-bottom: 338px;
   }
@@ -4082,7 +4018,6 @@ p.sm {
     width: calc(42% - 32px);
     max-width: 120px;
   }
-
   .needs__inner-title {
     margin-bottom: 10px;
   }
@@ -4095,7 +4030,6 @@ p.sm {
   .needsItem__inner {
     padding: 38% 24px 24px 24px;
   }
-
   .roadmapItem {
     width: 100%;
     padding: 4px 0 32px 44px;
@@ -4119,7 +4053,6 @@ p.sm {
   .roadmapItem p {
     font-size: 14px;
   }
-
   .destinationItem__button {
     display: none;
   }

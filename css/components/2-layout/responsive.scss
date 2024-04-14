@@ -156,6 +156,7 @@
     height: 100%;
     margin: 0;
     border-radius: unset;
+    overflow-y: auto;
     .drp-calendar {
       width: 100%;
       max-width: 340px;
@@ -166,24 +167,13 @@
       &.right {
         padding: 0 !important;
         .calendar-time {
-          position: absolute;
-          bottom: 94px;
+          width: 100%;
         }
       }
     }
-    .drp-buttons {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      padding: 24px;
-    }
+
     .calendar-time {
-      position: absolute;
-      left: 24px;
-      bottom: 150px;
-      margin: 0;
-      width: calc(100% - 48px);
+      width: 100%;
     }
   }
   @include header-xsm-sm;

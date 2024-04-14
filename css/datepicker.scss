@@ -305,7 +305,10 @@
   border-radius: 8px;
   display: flex;
 }
-
+.daterangepicker .calendar-time select {
+  -webkit-appearance: none;
+  box-shadow: unset;
+}
 .daterangepicker .calendar-time select.disabled {
   color: #ccc;
   cursor: not-allowed;

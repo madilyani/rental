@@ -186,42 +186,4 @@ $(function () {
 });
 
 /*mobile slider */
-function mobileOnlySlider() {
-  $(".slider").slick({
-    infinite: false,
-    speed: 600,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    adaptiveHeight: false,
-    arrows: false,
-    dots: false,
-    responsive: [
-      {
-        breakpoint: 540,
-        settings: {
-          slidesToShow: 1.12,
-          slidesToScroll: 1,
-          arrows: true,
-        },
-      },
-    ],
-  });
-}
-if (window.innerWidth < 751) {
-  mobileOnlySlider();
-}
-function resizeListener(e) {
-  if (window.innerWidth < 751) {
-    $(".slider").addClass("sliderMob");
-    if (!$(".slider").hasClass("slick-initialized")) {
-      mobileOnlySlider();
-    }
-  } else {
-    $(".slider").removeClass("sliderMob");
-    if ($(".slider").hasClass("slick-initialized")) {
-      $(".slider").slick("unslick");
-    }
-  }
-}
-resizeListener();
-$(window).resize(resizeListener);
+

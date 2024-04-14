@@ -925,6 +925,12 @@
       margin: 0 -16px;
       padding-top: 16px;
     }
+    &-content {
+      display: none;
+      &.active {
+        display: block;
+      }
+    }
   }
   &Item {
     width: calc(25% - 8px);
